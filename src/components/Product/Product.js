@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
       function add(a,b){
           return a+b;
       }
-    console.log(props.product.key);
+   // console.log(props.product.key);
 
     const {img,name,seller,price,stock,key}=props.product;
 
@@ -28,13 +28,13 @@ import { Link } from 'react-router-dom';
             <br></br>
             <p><small>Only {stock} left in stock - Order soon</small></p>
 
-             <button 
+             {props.showAddToCart===true && <button 
              className="main-button"
              onClick={()=>props.handleAddProduct(props.product)}
              >
                  
                   <FontAwesomeIcon icon={faShoppingCart} />
-add to cart</button>
+              add to cart</button>}
 
 
 
