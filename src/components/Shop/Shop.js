@@ -11,12 +11,19 @@ const Shop = () => {
     const [products,setProducts]=useState(first10);
     //const first10=fake.slice(0,10);
 
+       const handleAddProduct=(product)=>{
+           console.log('Product Added',product);
+       }
+
+
     return (
         <div className="shop-container">
             <div className="product-container">
             
                 {
-                 products.map(pd=><Product product={pd} ></Product>)
+                 products.map(pd=><Product
+                    handleAddProduct={handleAddProduct}
+                    product={pd} ></Product>)
 
                 }
            
